@@ -18,7 +18,9 @@ echo "@tailwind base;
 @tailwind utilities;" > src/index.css
 
 # Editing main.js
-TEXT="import './index.css'\n"
+TEXT="import './index.css'
+
+"
 tmpfile="mktemp"
 head -n1 src/main.js > $tmpfile
 echo $TEXT >> $tmpfile
