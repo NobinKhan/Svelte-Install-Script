@@ -1,5 +1,5 @@
 echo "Welcome to This svelte install script
-It will install Vite + Svelte + TailwindCSS + Daisyui
+It will install Vite + Svelte + TailwindCSS
 "
 echo "Installing svelte"
 read -p "Enter your Svelte Project Name: " PROJECTNAME
@@ -31,18 +31,18 @@ mv $tmpfile src/main.js
 mv postcss.config.js postcss.config.cjs
 mv tailwind.config.js tailwind.config.cjs
 
-# Installing Daisy-UI
-yarn add daisyui
+# # Installing Daisy-UI
+# yarn add daisyui
 
-# Editing tailwind.config.cjs
-TEXT=" plugins: [
-      require('daisyui'),
-    ],"
-tmpfile="mktemp"
-head -n9 tailwind.config.cjs > $tmpfile
-echo $TEXT >> $tmpfile
-tail -n1 tailwind.config.cjs >> $tmpfile
-mv $tmpfile tailwind.config.cjs
+# # Editing tailwind.config.cjs
+# TEXT=" plugins: [
+#       require('daisyui'),
+#     ],"
+# tmpfile="mktemp"
+# head -n9 tailwind.config.cjs > $tmpfile
+# echo $TEXT >> $tmpfile
+# tail -n1 tailwind.config.cjs >> $tmpfile
+# mv $tmpfile tailwind.config.cjs
 
 
 echo "
